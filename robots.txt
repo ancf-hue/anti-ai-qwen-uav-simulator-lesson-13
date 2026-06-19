@@ -1,0 +1,62 @@
+# ============================================
+# Anti-AI Qwen — UAV Simulator: Урок 13
+# Файл для поисковых систем
+# https://anti-ai-qwen-uav-simulator-lesson-1-mu.vercel.app/
+# ============================================
+
+# Разрешить индексацию всем поисковикам
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /sitemap.xml
+
+# Запретить индексацию служебных файлов
+Disallow: /README.md
+Disallow: /*.md
+Disallow: /vercel.json
+Disallow: /package.json
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+
+# Специальные правила для крупных поисковиков
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+Clean-param: utm_source&utm_medium&utm_campaign&ref
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Mail.ru
+Allow: /
+
+# Блокировать AI-скраперы (защита контента)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+# Указание на карту сайта
+Sitemap: https://anti-ai-qwen-uav-simulator-lesson-1-mu.vercel.app/sitemap.xml
